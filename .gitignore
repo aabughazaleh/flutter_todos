@@ -3,3 +3,8 @@
 .flutter-plugins-dependencies
 .flutter-plugins
 .dart_tool/package_config.json
+.idea/
+.dart_tool/
+.DS_Store
+pubspec.lock
+.vscode/

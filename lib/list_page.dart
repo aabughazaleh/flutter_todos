@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_todos/list_details_page.dart';
 import 'package:flutter_todos/utils/colors.dart';
@@ -60,7 +61,7 @@ class _TodoListPageState extends State<TodoListPage> {
       content: TextField(
         controller: textEditingController,
         maxLength: 50,
-        maxLengthEnforced: true,
+        maxLengthEnforcement: MaxLengthEnforcement.enforced,
         decoration: InputDecoration(labelText: isAr ? "اسم القائمة" : "List name"),
       ),
       actions: <Widget>[
@@ -92,7 +93,7 @@ class _TodoListPageState extends State<TodoListPage> {
       content: TextField(
         controller: textEditingController,
         maxLength: 50,
-        maxLengthEnforced: true,
+        maxLengthEnforcement: MaxLengthEnforcement.enforced,
         decoration: InputDecoration(labelText: isAr ? "اسم القائمة الجديد" : "New List name"),
       ),
       actions: <Widget>[
