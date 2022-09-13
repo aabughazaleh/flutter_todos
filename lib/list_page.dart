@@ -26,6 +26,10 @@ class _TodoListPageState extends State<TodoListPage> {
     return Scaffold(
       appBar: AppBar(
         brightness: Theme.of(context).brightness,
+        /*systemOverlayStyle: SystemUiOverlayStyle(
+          //statusBarIconBrightness: Globals.isLight ? Brightness.dark : Brightness.light,
+          statusBarBrightness: Theme.of(context).brightness,
+        ),*/
         elevation: 0,
         centerTitle: true,
         title: Text((isAr ? 'مدير المهام' : 'Todo List')),
