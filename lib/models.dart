@@ -35,7 +35,7 @@ class TasksList {
     etag = json['etag'];
     nextPageToken = json['nextPageToken'];
     if (json['items'] != null) {
-      items = new List<Items>();
+      items = [];
       json['items'].forEach((v) {
         items.add(new Items.fromJson(v));
       });
@@ -106,7 +106,7 @@ class ListDetails {
     etag = json['etag'];
     nextPageToken = json['nextPageToken'];
     if (json['items'] != null) {
-      items = new List<Task>();
+      items = [];
       json['items'].forEach((v) {
         items.add(new Task.fromJson(v));
       });
