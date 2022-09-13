@@ -56,10 +56,15 @@ class _TaskInputState extends State<TaskInput> {
                   alignment: isAr ? Alignment.centerLeft : Alignment.centerRight,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                        color: Color(TodosColor.kPrimaryColorCode),
-                        textColor: Colors.white,
+                    child: TextButton(
+                        //shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        //color: Color(TodosColor.kPrimaryColorCode),
+                        //textColor: Colors.white,
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color(TodosColor.kPrimaryColorCode),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        ),
                         onPressed: () async {
                           setState(() {
                             loading = true;

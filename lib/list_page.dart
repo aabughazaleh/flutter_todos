@@ -65,16 +65,24 @@ class _TodoListPageState extends State<TodoListPage> {
         decoration: InputDecoration(labelText: isAr ? "اسم القائمة" : "List name"),
       ),
       actions: <Widget>[
-        RaisedButton(
-          color: Color(TodosColor.kPrimaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kPrimaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kPrimaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () async {
             String name = textEditingController?.text?.trim();
             await createList(name);
           },
           child: Text(isAr ? 'إنشاء' : 'Create', style: TextStyle(color: Colors.white)),
         ),
-        RaisedButton(
-          color: Color(TodosColor.kSecondaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kSecondaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kSecondaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () => Navigator.pop(context),
           child: Text(isAr ? 'الغاء' : 'Cancel', style: TextStyle(color: Colors.white)),
         ),
@@ -97,16 +105,24 @@ class _TodoListPageState extends State<TodoListPage> {
         decoration: InputDecoration(labelText: isAr ? "اسم القائمة الجديد" : "New List name"),
       ),
       actions: <Widget>[
-        RaisedButton(
-          color: Color(TodosColor.kPrimaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kPrimaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kPrimaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () async {
             String name = textEditingController?.text?.trim();
             await updateList(name, list);
           },
           child: Text(isAr ? 'تحديث' : 'Update', style: TextStyle(color: Colors.white)),
         ),
-        RaisedButton(
-          color: Color(TodosColor.kSecondaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kSecondaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kSecondaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () => Navigator.pop(context),
           child: Text(isAr ? 'الغاء' : 'Cancel', style: TextStyle(color: Colors.white)),
         ),

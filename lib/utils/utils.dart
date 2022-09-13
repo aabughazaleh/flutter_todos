@@ -37,13 +37,21 @@ class Utils {
         isAr ? 'سيتم حذف جميع بيانات هذه القائمة!' : 'This will delete this todo list nd all of its items!',
       ),
       actions: <Widget>[
-        RaisedButton(
-          color: Color(TodosColor.kPrimaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kPrimaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kPrimaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () => Navigator.pop(context, true),
           child: Text(isAr ? 'نعم' : 'Yes', style: TextStyle(color: Colors.white)),
         ),
-        RaisedButton(
-          color: Color(TodosColor.kSecondaryColorCode),
+        ElevatedButton(
+          //color: Color(TodosColor.kSecondaryColorCode),
+          style: TextButton.styleFrom(
+            backgroundColor: Color(TodosColor.kSecondaryColorCode),
+            //foregroundColor: Colors.green,
+          ),
           onPressed: () => Navigator.pop(context, false),
           child: Text(isAr ? 'الغاء' : 'Cancel', style: TextStyle(color: Colors.white)),
         ),
